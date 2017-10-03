@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # macOS Bing's wallpaper
-# v0.2
+# v0.2.1
 
 # Default language
 LANGUAGE="fr-CA"
@@ -14,7 +14,7 @@ while [[ $# -gt 0 ]] ; do
         "--force" ) FORCE=true;;
         "-n"|"--no-refresh" ) NOREFRESH=true;;
         "-l"|"--language" ) LANGUAGE="$1"; shift;;
-        "--language="* ) LANGUAGE="${opt#*=}";;
+        "--language="* ) LANGUAGE="${arg#*=}";;
         *) >&2 echo "Unknown parameter: %arg\n"; exit 1;;
     esac
 done

@@ -44,12 +44,10 @@ where you can write
 ### Options
 
 ```
-	
-	-l --language			Set language code (eg. en-GB, fr-FR ...)
-							This option change the hour of new bing image, and the
-							caption language
-	-c --caption 			Write description on the image
-	-n --no-refresh			Do not refresh Dock (so, wallpaper) after downloaded it
-	--force					Force update image, even if already updated same day
-
+-l --language		Set language code (eg. en-GB, fr-FR ...)
+		This option change the hour of new bing image, and the
+		caption language
+-c --caption 		Write description on the image
+-n --no-refresh	Do not refresh Dock (so, wallpaper) after downloaded it
+--force		Force update image, even if already updated same day
 ```
