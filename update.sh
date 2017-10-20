@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # macOS Bing's wallpaper
-# v0.2.1
+# v0.2.2
 
 # Default language
 LANGUAGE="fr-CA"
