@@ -29,6 +29,8 @@ function parse {
 JSON=$(curl -s $API)
 DATE=$(parse fullstartdate);
 
+echo $CAPTION;
+
 if [ ! $FORCE ] && [ -f "$DATE.wall" ]; then
 	echo "Already up to date."
 else
@@ -38,13 +40,14 @@ else
 	curl -s "http://www.bing.com$URL" -o wallpaper.jpg
 
 	if [ $CAPTION ]; then
-		if [ $(type -t convert) ]; then
+        CONVERT_PATH="/usr/local/bin/convert"
+		if [ $(type -t $CONVERT_PATH) ]; then
 			TEXT=$(parse copyright | sed -e 's/\( (©.*\)$//');
-			convert -background '#0008' -fill white -gravity center -size $((${#TEXT}*10))x40 -pointsize 20 \
+			$CONVERT_PATH -background '#0008' -fill white -gravity center -size $((${#TEXT}*10))x40 -pointsize 20 \
           			caption:"$TEXT" \
           			wallpaper.jpg +swap -geometry +130+100 -gravity southeast -composite wallpaper.jpg;
         else
-        	echo "! Warning: cannot add caption, you need to install imagemagick dependencies. See Homebrew and 'brew install imagemagick'";
+        	echo "Warning: cannot add caption, you need to install imagemagick dependencies. See Homebrew and 'brew install imagemagick'";
         fi
     fi
 
