@@ -2,6 +2,8 @@
 
 Get bing's image of the day on your desktop and travel easily through the world all days
 
+![Example image](example.jpg)
+
 **Optionnal dependencies setup**
 
 If you want a caption on your wallpaper to know more about it, you need the _imagemagick_ lib on your Mac.

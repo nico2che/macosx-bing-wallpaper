@@ -2,3 +2,4 @@
 *.wall
 *.jpg
 .idea/
+!example.jpg
