@@ -41,6 +41,12 @@ where you can write
 
 `0 * * * * cd ~/Pictures/wallpaper && ~/Pictures/wallpaper/update.sh [options]`
 
+**Update tool**
+
+`cd ~/Pictures/wallpaper && git pull`
+
+Soon automatic update
+
 ### Options
 
 ```
@@ -51,3 +57,24 @@ where you can write
 -n --no-refresh	    Do not refresh Dock (so, wallpaper) after downloaded it
 --force		    Force update image, even if already updated same day
 ```
+
+
+### TODO
+
+- Automating update
+- Caption options:
+	- position
+	- size
+	- bg-opacity
+	- text color
+	- padding
+- Native item on menu bar:
+	- another way to see caption, and license
+	- link to the bing request to know more
+	- navigate to old day pictures
+	- lock current picture ?..
+- ...
+
+### License
+
+The content of this project itself is licensed under the [WTFPL](http://www.wtfpl.net/).
