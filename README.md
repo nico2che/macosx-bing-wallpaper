@@ -39,7 +39,7 @@ In order to change your wallpaper all days, let's write a cron job which verify 
 
 where you can write
 
-`0 * * * * ~/Pictures/wallpaper/update.sh [options]`
+`0 * * * * cd ~/Pictures/wallpaper && ~/Pictures/wallpaper/update.sh [options]`
 
 ### Options
 

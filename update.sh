@@ -29,8 +29,6 @@ function parse {
 JSON=$(curl -s $API)
 DATE=$(parse fullstartdate);
 
-echo $CAPTION;
-
 if [ ! $FORCE ] && [ -f "$DATE.wall" ]; then
 	echo "Already up to date."
 else
